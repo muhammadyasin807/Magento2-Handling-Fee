@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="quote"
+           resource="checkout"
+           engine="innodb">
+
+        <column xsi:type="decimal"
+                name="doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Handling Fee Amount"/>
+
+        <column xsi:type="decimal"
+                name="base_doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Base Handling Fee Amount"/>
+
+    </table>
+
+    <table name="sales_order"
+           resource="sales"
+           engine="innodb">
+
+        <column xsi:type="decimal"
+                name="doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Handling Fee Amount"/>
+
+        <column xsi:type="decimal"
+                name="base_doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Base Handling Fee Amount"/>
+    </table>
+
+</schema>
