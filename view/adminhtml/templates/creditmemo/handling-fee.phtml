@@ -1,0 +1,23 @@
+<?php
+/** @var \Doit\HandlingFee\Block\Adminhtml\Creditmemo\HandlingFee $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<tr>
+    <td class="label">
+        <label for="doit_handling_fee_refund">
+            <?= $escaper->escapeHtml(
+                __('Refund Handling Fee (%1)', $block->getCurrencyCode())
+            ) ?>
+        </label>
+    </td>
+    <td>
+        <input type="text"
+               id="doit_handling_fee_refund"
+               name="creditmemo[doit_handling_fee_amount]"
+               value="<?= $escaper->escapeHtmlAttr(
+                   (string) $block->getRefundAmount()
+               ) ?>"
+               class="input-text admin__control-text"/>
+    </td>
+</tr>

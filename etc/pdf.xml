@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module-sales:etc/pdf.xsd">
+    <totals>
+        <total name="doit_handling_fee">
+            <title translate="true">Handling Fee</title>
+            <source_field>doit_handling_fee_amount</source_field>
+            <font_size>7</font_size>
+            <display_zero>false</display_zero>
+            <sort_order>650</sort_order>
+        </total>
+    </totals>
+</config>

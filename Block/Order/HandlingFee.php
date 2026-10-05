@@ -12,9 +12,9 @@ class HandlingFee extends Template
     public function initTotals(): self
     {
         $parent = $this->getParentBlock();
-        $order = $parent->getOrder();
+        $source = $parent->getSource();
 
-        $fee = (float) $order->getData(
+        $fee = (float) $source->getData(
             'doit_handling_fee_amount'
         );
 
@@ -26,6 +26,9 @@ class HandlingFee extends Template
             'code' => 'doit_handling_fee',
             'label' => __('Handling Fee'),
             'value' => $fee,
+            'base_value' => (float) $source->getData(
+                'base_doit_handling_fee_amount'
+            ),
         ]);
 
         $parent->addTotalBefore($total, 'grand_total');

@@ -45,4 +45,44 @@
                 comment="Base Handling Fee Amount"/>
     </table>
 
+    <table name="sales_invoice"
+           resource="sales"
+           engine="innodb">
+
+        <column xsi:type="decimal"
+                name="doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Invoice Handling Fee Amount"/>
+
+        <column xsi:type="decimal"
+                name="base_doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Invoice Base Handling Fee Amount"/>
+    </table>
+    <table name="sales_creditmemo"
+           resource="sales"
+           engine="innodb">
+
+        <column xsi:type="decimal"
+                name="doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Credit Memo Handling Fee Amount"/>
+
+        <column xsi:type="decimal"
+                name="base_doit_handling_fee_amount"
+                precision="20"
+                scale="4"
+                nullable="false"
+                default="0"
+                comment="Credit Memo Base Handling Fee Amount"/>
+    </table>
 </schema>

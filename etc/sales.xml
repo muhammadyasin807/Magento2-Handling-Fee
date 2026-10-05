@@ -8,4 +8,11 @@
                   sort_order="500"/>
         </group>
     </section>
+    <section name="order_invoice">
+        <group name="totals">
+            <item name="doit_handling_fee"
+                  instance="Doit\HandlingFee\Model\Order\Invoice\Total\HandlingFee"
+                  sort_order="300"/>
+        </group>
+    </section>
 </config>
